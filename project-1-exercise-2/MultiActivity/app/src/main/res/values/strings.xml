@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MultiActivity</string>
+    <string name="Act_A">Activity A</string>
+    <string name="Act_B">Activity B</string>
+    <string name="clickButtonA">Go To B</string>
+    <string name="clickButtonB">Go To A</string>
+</resources>
