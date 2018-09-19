@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SignUpForm</string>
+    <string name="nameInput">Name</string>
+    <string name="nameUserInput">Enter name</string>
+</resources>
