@@ -1,5 +1,6 @@
 package edu.temple.signupform;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -13,6 +14,10 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        TextView welcomeText = new TextView();
+        Intent intent = getIntent();
+        String userName = intent.getStringExtra("NAME");
+
+        TextView welcome = (TextView) findViewById(R.id.welcomeText);
+        welcome.setText("Welcome, "+userName+", to the SignUpForm App!");
     }
 }

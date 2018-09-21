@@ -62,6 +62,8 @@ public class FormActivity extends AppCompatActivity {
 
     private void launchActivity(){
         Intent intent = new Intent(this, WelcomeActivity.class);
+        EditText sendText = (EditText) findViewById(R.id.nameUserInput);
+        intent.putExtra("NAME", sendText.getText().toString());
 
         startActivity(intent);
     }
