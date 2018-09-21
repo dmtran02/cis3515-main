@@ -36,7 +36,7 @@
                 android:width="200dp"
                 android:hint="@string/nameUserInput"
                 android:inputType="textCapWords"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginStart="10dp"/>
 
         </TableRow>
 
@@ -58,7 +58,7 @@
                 android:width="200dp"
                 android:hint="Enter email address"
                 android:inputType="textEmailAddress"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginStart="10dp"/>
 
         </TableRow>
 
@@ -67,18 +67,20 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/pwdInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:text="Password" />
 
             <EditText
-                android:layout_height="wrap_content"
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:width="200dp"
                 android:hint="Enter password"
-                android:inputType="textPassword"
-                android:layout_marginLeft="10dp"/>
+                android:inputType="textPassword" />
 
         </TableRow>
 
@@ -87,18 +89,20 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/pwdConfirmInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:text="Confirm" />
 
             <EditText
+                android:id="@+id/pwdConfirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:width="200dp"
                 android:hint="Confirm password"
-                android:inputType="textPassword"
-                android:layout_marginLeft="10dp"/>
+                android:inputType="textPassword" />
 
         </TableRow>
 
