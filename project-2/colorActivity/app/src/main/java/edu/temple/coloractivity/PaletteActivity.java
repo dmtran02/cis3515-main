@@ -15,7 +15,7 @@ public class PaletteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palette);
 
-        View colorView = findViewById(R.id.paletteView);
+        final View colorView = findViewById(R.id.paletteView);
 
         String colors[] = {"White", "Red", "Yellow", "Green", "Blue", "Magenta"};
 
@@ -28,7 +28,7 @@ public class PaletteActivity extends AppCompatActivity {
         AdapterView.OnItemSelectedListener colorOISL = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                view.setBackgroundColor(Color.parseColor(((TextView)view).getText().toString()));
+                colorView.setBackgroundColor(Color.parseColor(((TextView)view).getText().toString()));
             }
 
             @Override

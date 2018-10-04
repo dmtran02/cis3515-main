@@ -35,11 +35,11 @@ public class CustomAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        TextView colorsView = new TextView(context);
-        colorsView.setText(colors[position]);
-        colorsView.setBackgroundColor(Color.parseColor(colors[position]));
+        TextView colorView = new TextView(context);
+        colorView.setText(colors[position]);
+        colorView.setBackgroundColor(Color.parseColor(colors[position]));
 
-        return colorsView;
+        return colorView;
 
     }
 }
