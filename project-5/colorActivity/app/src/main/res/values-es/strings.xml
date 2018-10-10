@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Actividad de la Paleta</string>
+
+    <string-array name="colorArray">
+        <item>Rojo</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Amarillo</item>
+        <item>Magenta</item>
+        <item>Negro</item>
+        <item>Blanco</item>
+    </string-array>
+
+</resources>
