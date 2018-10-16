@@ -10,21 +10,21 @@ import android.widget.TextView;
 public class CustomAdapter extends BaseAdapter {
 
     Context context;
-    String colorArray[];
+    String colors[];
 
-    public CustomAdapter(Context context, String[] colorArray){
+    public CustomAdapter(Context context, String[] colors){
         this.context = context;
-        this.colorArray = colorArray;
+        this.colors = colors;
     }
 
     @Override
     public int getCount() {
-        return colorArray.length;
+        return colors.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return colorArray[position];
+        return colors[position];
     }
 
     @Override
@@ -35,11 +35,11 @@ public class CustomAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        TextView colorGrid = new TextView(context);
-        colorGrid.setText(colorArray[position]);
-        colorGrid.setBackgroundColor(Color.parseColor(colorArray[position]));
+        TextView colorView = new TextView(context);
+        colorView.setText(colors[position]);
+        colorView.setBackgroundColor(Color.parseColor(colors[position]));
 
-        return colorGrid;
+        return colorView;
 
     }
 }
