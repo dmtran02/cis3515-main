@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Palette Activity</string>
+    <string name="colorWhite">White</string>
+    <string name="colorRed">Red</string>
+    <string name="colorYellow">Yellow</string>
+    <string name="colorGreen">Green</string>
+    <string name="colorBlue">Blue</string>
+    <string name="colorMagenta">Magenta</string>
+    <string name="colorBlack">Black</string>
     <string-array name="colors_array">
         <item>White</item>
         <item>Red</item>
-        <item>Yellow</item>
+        <item>Black</item>
         <item>Green</item>
         <item>Blue</item>
         <item>Magenta</item>
         <item>Black</item>
     </string-array>
+
+    <string name="colorBlanco">Blanco</string>
+    <string name="colorRojo">Rojo</string>
+    <string name="colorAmarillo">Amarillo</string>
+    <string name="colorVerde">Verde</string>
+    <string name="colorAzul">Azul</string>
+    <string name="colorMag">Magenta</string>
+    <string name="colorNegro">Negro</string>
 </resources>

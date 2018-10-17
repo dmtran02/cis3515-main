@@ -11,10 +11,13 @@ public class CustomAdapter extends BaseAdapter {
 
     Context context;
     String colors[];
+    String colorTable[];
 
-    public CustomAdapter(Context context, String[] colors){
+    public CustomAdapter(Context context, String[] colors, String[] colorList){
         this.context = context;
         this.colors = colors;
+        this.colorTable = colorList;
+
     }
 
     @Override
@@ -37,7 +40,7 @@ public class CustomAdapter extends BaseAdapter {
 
         TextView colorView = new TextView(context);
         colorView.setText(colors[position]);
-        colorView.setBackgroundColor(Color.parseColor(colors[position]));
+        colorView.setBackgroundColor(Color.parseColor(colorTable[position]));
 
         return colorView;
 
