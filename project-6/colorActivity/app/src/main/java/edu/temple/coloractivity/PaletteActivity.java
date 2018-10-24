@@ -35,7 +35,7 @@ public class PaletteActivity extends AppCompatActivity implements ColorListener{
 
     }
 
-    public void setColor(String c) {
+    public void setColor(String color) {
         if(findViewById(R.id.portrait) != null){
             FragmentManager fm3 = getSupportFragmentManager();
             fm3.beginTransaction()
@@ -43,10 +43,10 @@ public class PaletteActivity extends AppCompatActivity implements ColorListener{
                     .addToBackStack(null)
                     .commit();
             fm3.executePendingTransactions();
-            findViewById(R.id.pFragment).setBackgroundColor(Color.parseColor(c));
+            findViewById(R.id.pFragment).setBackgroundColor(Color.parseColor(color));
 
         }else if(findViewById(R.id.land) != null){
-            findViewById(R.id.cFragment).setBackgroundColor(Color.parseColor(c));
+            findViewById(R.id.cFragment).setBackgroundColor(Color.parseColor(color));
         }
 
     }

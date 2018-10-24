@@ -42,7 +42,7 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         TextView colorView = new TextView(context);
-        colorView.setText(colors1[position]);
+        colorView.setText(colors2[position]);
         colorView.setBackgroundColor(Color.parseColor(colors1[position]));
 
         return colorView;

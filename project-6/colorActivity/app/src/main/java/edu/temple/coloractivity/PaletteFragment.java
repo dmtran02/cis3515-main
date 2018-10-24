@@ -44,9 +44,9 @@ public class PaletteFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                /*String s = parent.getItemAtPosition(position).toString();
-                select.setColor(s);*/
-                select.setColor(parent.getItemAtPosition(position).toString());
+                String s = parent.getItemAtPosition(position).toString();
+                select.setColor(s);
+                //select.setColor(parent.getItemAtPosition(position).toString());
             }
         });
         return v;
