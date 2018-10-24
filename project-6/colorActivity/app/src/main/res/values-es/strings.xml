@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Actividad de la Paleta</string>
+
+    <string name="White">White</string>
+    <string name="Red">Red</string>
+    <string name="Black">Black</string>
+    <string name="Green">Green</string>
+    <string name="Blue">Blue</string>
+    <string name="Magenta">Magenta</string>
+
+    <string-array name="colors_array">
+        <item>White</item>
+        <item>Red</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Magenta</item>
+    </string-array>
+
+    <string-array name="colors_array2">
+        <item>Blanco</item>
+        <item>Rojo</item>
+        <item>Negro</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Magenta</item>
+    </string-array>
+</resources>
