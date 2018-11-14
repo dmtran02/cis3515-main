@@ -1,45 +1,69 @@
 package edu.temple.webbrowser;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
-    private Toolbar myToolbar;
+public class MainActivity extends Activity {
+
+    private ArrayList<FragmentTabs> frags;
+    private FragmentManager fragmentManager;
+
+    private EditText editURL;
+
+    private int currentTab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
-    }
+        frags = new ArrayList<>();
+        fragmentManager = getFragmentManager();
+        editURL = (EditText)findViewById(R.id.urlAddress);
+        currentTab = -1;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
+        findViewById(R.id.previousButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(currentTab > 0){
+                    currentTab--;
+                    editURL.setText(frags.get(currentTab).getURL());
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.frameWeb, frags.get(currentTab))
+                            .commit();
+                }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
+            }
+        });
 
-        if(id == R.id.action_next){
-            Toast.makeText(MainActivity.this, "Action clicked", Toast.LENGTH_LONG).show();
-            return true;
-        }
+        findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(currentTab < frags.size() - 1){
+                    currentTab++;
+                    editURL.setText(frags.get(currentTab).getURL());
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.frameWeb, frags.get(currentTab))
+                            .commit();
+                }
+            }
+        });
 
-        else if(id == R.id.action_prev){
-            Toast.makeText(MainActivity.this, "Action clicked", Toast.LENGTH_LONG).show();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        findViewById(R.id.goButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                frags.add(FragmentTabs.newInstance(editURL.getText().toString()));
+                currentTab = frags.size() - 1;
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frameWeb, frags.get(currentTab))
+                        .commit();
+            }
+        });
     }
 }
+
