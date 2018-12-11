@@ -1,1 +1,1 @@
-This is a stock market application.
+This is a stock market application for CIS 3515.
